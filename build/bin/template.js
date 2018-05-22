@@ -1,7 +1,7 @@
 const path = require('path');
 const templates = path.resolve(process.cwd(), './examples/pages/template');
 
-const chokidar = require('chokidar');
+const chokidar = require('chokidar'); // 用于跟踪文件的变化
 let watcher = chokidar.watch([templates]);
 
 watcher.on('ready', function() {
