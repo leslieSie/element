@@ -100,3 +100,6 @@ var template = render(MAIN_TEMPLATE, {
 
 fs.writeFileSync(OUTPUT_PATH, template);
 console.log('[build entry] DONE:', OUTPUT_PATH);
+
+/** 说明***/
+// 将所有的模块打包生成入口的JS文件（ES6）

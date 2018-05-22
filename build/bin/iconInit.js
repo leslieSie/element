@@ -20,5 +20,5 @@ nodes.forEach((node) => {
 
 fs.writeFile(path.resolve(__dirname, '../../examples/icon.json'), JSON.stringify(classList));
 
-/*****备注*****/
-// 主要的目的在于通过对scss文件的读取，从而确定需要初始化的图标，并把图标写入到特定的JSON文件中
+/** ***备注*****/
+// 这个文件主要的作用是用于提取icon.scss中的使用到的图标，并将图标写入到一个jSON文件中
