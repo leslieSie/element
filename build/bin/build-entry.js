@@ -79,7 +79,7 @@ ComponentNames.forEach(name => {
     package: name
   }));
 
-  // 符合以下的组件，会将组件放到另外的一个数组中，这个数组的目的是要直接挂载到全局上面
+  // 不符合以下的组件，会将组件放到另外的一个数组中，这个数组的目的是要直接挂载到vue中，被当做一个组件使用 PS：符合的话，会直接挂到全局
   if (['Loading', 'MessageBox', 'Notification', 'Message'].indexOf(componentName) === -1) {
     installTemplate.push(render(INSTALL_COMPONENT_TEMPLATE, {
       name: componentName,
