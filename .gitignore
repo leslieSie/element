@@ -16,4 +16,3 @@ coverage
 waiter.config.js
 build/bin/algolia-key.js
 .envrc
-package-lock.json
