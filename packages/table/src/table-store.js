@@ -74,6 +74,7 @@ const toggleRowExpansion = function(states, row, expanded) {
   return changed;
 };
 
+// table组件的存储function
 const TableStore = function(table, initialState = {}) {
   if (!table) {
     throw new Error('Table is required.');
