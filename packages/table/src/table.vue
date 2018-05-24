@@ -213,9 +213,9 @@
 </template>
 
 <script type="text/babel">
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import debounce from 'throttle-debounce/debounce';
-  import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';
+  // import ElCheckbox from 'element-ui/packages/checkbox';
+  import debounce from 'throttle-debounce/debounce'; // 控制调用次数（第三方）
+  import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';// 第三方
   import Mousewheel from 'element-ui/src/directives/mousewheel';
   import Locale from 'element-ui/src/mixins/locale';
   import Migrating from 'element-ui/src/mixins/migrating';
@@ -317,8 +317,8 @@
     components: {
       TableHeader,
       TableFooter,
-      TableBody,
-      ElCheckbox
+      TableBody
+      // ElCheckbox
     },
 
     methods: {
