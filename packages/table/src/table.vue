@@ -215,7 +215,8 @@
 <script type="text/babel">
   // import ElCheckbox from 'element-ui/packages/checkbox';
   import debounce from 'throttle-debounce/debounce'; // 控制调用次数（第三方）
-  import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';// 第三方
+  import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';// 添加第三方元素调整监控器，目的是监控元素是否发生了变化
+  // 说明下面的element-ui是在babel下面定义的根目录，对应的就是文件夹中的element，不需要要疑惑
   import Mousewheel from 'element-ui/src/directives/mousewheel';
   import Locale from 'element-ui/src/mixins/locale';
   import Migrating from 'element-ui/src/mixins/migrating';
@@ -365,7 +366,9 @@
       },
 
       handleFixedMousewheel(event, data) {
+        
         const bodyWrapper = this.bodyWrapper;
+
         if (Math.abs(data.spinY) > 0) {
           const currentScrollTop = bodyWrapper.scrollTop;
           if (data.pixelY < 0 && currentScrollTop !== 0) {
